@@ -137,9 +137,9 @@ window.__uniConfig = { "window": { "navigationBarTextStyle": "black", "navigatio
 if (uni.restoreGlobal) {
   uni.restoreGlobal(weex, plus, setTimeout, clearTimeout, setInterval, clearInterval);
 }
+__definePage('pages/login/login', function () {return Vue.extend(__webpack_require__(/*! pages/login/login.vue?mpType=page */ 17).default);});
 __definePage('pages/demo/demo', function () {return Vue.extend(__webpack_require__(/*! pages/demo/demo.vue?mpType=page */ 18).default);});
 __definePage('pages/index/index', function () {return Vue.extend(__webpack_require__(/*! pages/index/index.vue?mpType=page */ 2).default);});
-__definePage('pages/login/login', function () {return Vue.extend(__webpack_require__(/*! pages/login/login.vue?mpType=page */ 17).default);});
 
 /***/ }),
 /* 2 */
@@ -1191,47 +1191,7 @@ var render = function() {
       _c("v-uni-image", {
         staticClass: _vm._$g(1, "sc"),
         attrs: { src: _vm._$g(1, "a-src"), mode: "widthFix", _i: 1 }
-      }),
-      _c("v-uni-view", { staticClass: _vm._$g(2, "sc"), attrs: { _i: 2 } }, [
-        _vm._v("Emos企业在线办公系统")
-      ]),
-      _c("v-uni-view", { staticClass: _vm._$g(3, "sc"), attrs: { _i: 3 } }, [
-        _vm._v("Ver 2050.2")
-      ]),
-      _c(
-        "v-uni-button",
-        {
-          staticClass: _vm._$g(4, "sc"),
-          attrs: { "open-type": "getUserInfo", _i: 4 },
-          on: {
-            click: function($event) {
-              return _vm.$handleViewEvent($event)
-            }
-          }
-        },
-        [_vm._v("登陆系统")]
-      ),
-      _c(
-        "v-uni-view",
-        { staticClass: _vm._$g(5, "sc"), attrs: { _i: 5 } },
-        [
-          _vm._v("没有账号？"),
-          _c(
-            "v-uni-text",
-            {
-              staticClass: _vm._$g(6, "sc"),
-              attrs: { _i: 6 },
-              on: {
-                click: function($event) {
-                  return _vm.$handleViewEvent($event)
-                }
-              }
-            },
-            [_vm._v("立即注册")]
-          )
-        ],
-        1
-      )
+      })
     ],
     1
   )
@@ -1324,7 +1284,7 @@ if(false) {}
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../HBuilderX/HBuilderX/plugins/uniapp-cli/node_modules/css-loader/dist/runtime/api.js */ 10);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "@font-color:#333;\n@desc-color:#999,\r\n@background-color:#3474FF,\r\n@background-color-active:#0052FF;\n.logo{\r\n\twidth: 70%;\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n\tmargin-top: 30%;\n}\n.logo-title{\r\n\tfont-size:48rpx;\r\n\tfont-weight:bold;\r\n\tfont-align:center;\r\n\tmargin-top:8%;\r\n\tcolor:@font-color;\n}\n.logo-subtitle{\r\n\tfont-size:34rpx;\r\n\tfont-weight:bold;\r\n\tfont-align:center;\r\n\tmargin-top:20rpx;\r\n\tcolor:@font-color;\n}\n.login-btn{\r\n\twidth: 60%;\r\n\tposition: absolute;\r\n\tbottom: 20%;\r\n\tleft: 20%;\r\n\t-webkit-box-sizing: border-box;\r\n\t        box-sizing: border-box;\r\n\tbackground-color: @background-color;\r\n\tcolor: #FFF;\n}\n.login-btn:active{\r\n\tbackground-color: @background-color-active;\n}\n.register-container{\r\n\tposition: absolute;\r\n\tbottom: 50rpx;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tcolor: @font-color;\n.register{\r\n\t\tcolor:@background-color;\n}\n}\r\n", ""]);
+exports.push([module.i, "@font-color:#333;\n@desc-color:#999;\n@background-color:#3474FF;\n@background-color-active:#0052FF;\n.logo{\r\n\twidth: 70%;\r\n\tdisplay: block;\r\n\tmargin-left: auto;\r\n\tmargin-right: auto;\r\n\tmargin-top: 30%;\n}\n.logo-title{\r\n\tfont-size:48rpx;\r\n\tfont-weight:bold;\r\n\tfont-align:center;\r\n\tmargin-top:8%;\r\n\tcolor:@font-color;\n}\n.logo-subtitle{\r\n\tfont-size:34rpx;\r\n\tfont-weight:bold;\r\n\tfont-align:center;\r\n\tmargin-top:20rpx;\r\n\tcolor:@font-color;\n}\n.login-btn{\r\n\twidth: 60%;\r\n\tposition: absolute;\r\n\tbottom: 20%;\r\n\tleft: 20%;\r\n\t-webkit-box-sizing: border-box;\r\n\t        box-sizing: border-box;\r\n\tbackground-color: @background-color;\r\n\tcolor: #FFF;\n}\n.login-btn:active{\r\n\tbackground-color: @background-color-active;\n}\n.register-container{\r\n\tposition: absolute;\r\n\tbottom: 50rpx;\r\n\twidth: 100%;\r\n\ttext-align: center;\r\n\tcolor: @font-color;\n.register{\r\n\t\tcolor:@background-color;\n}\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
