@@ -13,11 +13,25 @@
 	export default {
 		data() {
 			return {
-				
+				registerCode:""
 			}
 		},
 		methods: {
 			register:function(){
+				let that = this
+				if(that.registerCode==null||that.registerCode.length==0){
+					uni.showToast({
+						icon:"none",
+						title:"邀请码不能为空"
+					})
+					return
+				}else if(/^[0-9]{6}$/.test(that.registerCode)==false){
+					uni.showToast({
+						icon:"none",
+						title:"邀请码数字必须为六位数字"
+					})
+					return
+				}
 				uni.login({
 					provider:"weixin",
 					success:function(resp){
@@ -27,6 +41,17 @@
 							success:function(resp){
 								let nickName = resp.userInfo.nickName;
 								let avatarUrl = resp.userInfo.avatarUrl;
+								let data = {
+									code:code,
+									nickname:nickName,
+									photo:avatarUrl,
+									registerCode:that.registerCode
+								}
+								that.ajax(that.url.register,"POST",data,function(resp){
+									let permission = resp.data.permission
+									uni.setStorageSync("permission")
+									//跳转到index页面
+								})
 							}
 						})	
 					}
