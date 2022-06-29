@@ -1,17 +1,15 @@
 {
-    "pages": [
-        "pages/login/login",
-        "pages/demo/demo",
-        "pages/index/index",
-        "pages/register/register"
-    ],
-    "subPackages": [],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "uni-app",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#F8F8F8"
-    },
-    "usingComponents": {},
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/register/register"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "EMOS系统",
+    "navigationBarBackgroundColor": "#3474FF",
+    "backgroundColor": "#EEEEF4"
+  },
+  "usingComponents": {}
 }

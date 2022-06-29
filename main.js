@@ -12,7 +12,8 @@ app.$mount()
 
 let baseUrl="http://10.135.10.81:8080/emos-wx-api"
 Vue.prototype.url={
-	register:baseUrl+"/user/register"
+	register:baseUrl+"/user/register",
+	login:baseUrl+"/user/login",
 }
 
 Vue.prototype.ajax=function(url,method,data,fun){
@@ -24,6 +25,7 @@ Vue.prototype.ajax=function(url,method,data,fun){
 		},
 		"data":data,
 		success:function(resp){
+			console.log(resp)
 			if(resp.statusCode==401){
 				uni.redirectTo({
 					url:"/pages/login/login.vue"
@@ -37,7 +39,6 @@ Vue.prototype.ajax=function(url,method,data,fun){
 				}
 				fun(resp)
 			}else{
-				console.log(resp)
 				uni.showToast({
 					icon:'none',
 					title:resp.data

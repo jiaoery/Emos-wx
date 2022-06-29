@@ -4,41 +4,30 @@
 		    "path" : "pages/login/login",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
+		        "navigationBarTitleText": "欢迎使用EMOS系统"
 		    }
 		    
 		},
 		{
-            "path" : "pages/demo/demo",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        },
-		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
 			}
 		},
 		{
 		    "path" : "pages/register/register",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "",
-		        "enablePullDownRefresh": false
+		        "navigationBarTitleText": "新用户注册"
 		    }
 		    
 		}
        
     ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "EMOS系统",
+		"navigationBarBackgroundColor": "#3474FF",
+		"backgroundColor": "#EEEEF4"
 	}
 }

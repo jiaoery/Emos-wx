@@ -21,7 +21,8 @@ createApp(app).$mount();
 
 var baseUrl = "http://10.135.10.81:8080/emos-wx-api";
 _vue.default.prototype.url = {
-  register: baseUrl + "/user/register" };
+  register: baseUrl + "/user/register",
+  login: baseUrl + "/user/login" };
 
 
 _vue.default.prototype.ajax = function (url, method, data, fun) {
@@ -33,6 +34,7 @@ _vue.default.prototype.ajax = function (url, method, data, fun) {
 
     "data": data,
     success: function success(resp) {
+      console.log(resp);
       if (resp.statusCode == 401) {
         uni.redirectTo({
           url: "/pages/login/login.vue" });
@@ -46,7 +48,6 @@ _vue.default.prototype.ajax = function (url, method, data, fun) {
         }
         fun(resp);
       } else {
-        console.log(resp);
         uni.showToast({
           icon: 'none',
           title: resp.data });
