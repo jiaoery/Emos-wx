@@ -22,9 +22,8 @@
 				"enablePullDownRefresh": false
 		    }
 		    
-		}
-       
-        ,{
+		},
+		{
             "path" : "pages/meeting_list/meeting_list",
             "style" :                                                                                    
             {
