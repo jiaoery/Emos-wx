@@ -183,6 +183,9 @@ var _default =
                 var permission = resp.data.permission;
                 uni.setStorageSync("permission");
                 //跳转到index页面
+                uni.switchTab({
+                  url: '../index/index' });
+
               });
             } });
 
