@@ -31,10 +31,14 @@
 					success:function(resp){
 						let code = resp.code
 						that.ajax(that.url.login,"POST",{"code":code},function(resp){
+							console.log(resp)
 							let permission = resp.data.permission
 							uni.setStorageSync("permission",permission)
+							//跳转到登陆页面
+						    uni.switchTab({
+							url: '../index/index'
+							});
 						})
-						console.log("success")
 					},
 					fail:function(e){
 						console.log(e)
