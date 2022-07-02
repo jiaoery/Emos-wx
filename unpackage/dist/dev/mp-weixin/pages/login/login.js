@@ -168,10 +168,14 @@ var _default =
         success: function success(resp) {
           var code = resp.code;
           that.ajax(that.url.login, "POST", { "code": code }, function (resp) {
+            console.log(resp);
             var permission = resp.data.permission;
             uni.setStorageSync("permission", permission);
+            //跳转到登陆页面
+            uni.switchTab({
+              url: '../index/index' });
+
           });
-          console.log("success");
         },
         fail: function fail(e) {
           console.log(e);
