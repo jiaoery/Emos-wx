@@ -1,38 +1,34 @@
 {
-  "description": "项目配置文件。",
-  "packOptions": {
-    "ignore": []
-  },
-  "setting": {
-    "urlCheck": false
-  },
-  "compileType": "miniprogram",
-  "libVersion": "",
-  "appid": "wx441d03c90e3678ee",
-  "projectname": "emos-wx",
-  "condition": {
-    "search": {
-      "current": -1,
-      "list": []
+    "description": "项目配置文件。",
+    "packOptions": {
+        "ignore": [],
+        "include": []
     },
-    "conversation": {
-      "current": -1,
-      "list": []
-    },
-    "game": {
-      "current": -1,
-      "list": []
-    },
-    "miniprogram": {
-      "current": 0,
-      "list": [
-        {
-          "name": "主页",
-          "query": "",
-          "id": 0,
-          "pathName": "pages/index/index"
+    "setting": {
+        "urlCheck": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
         }
-      ]
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.17.0",
+    "appid": "wx441d03c90e3678ee",
+    "projectname": "emos-wx",
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "主页",
+                    "pathName": "pages/index/index",
+                    "query": ""
+                }
+            ]
+        }
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
     }
-  }
 }
