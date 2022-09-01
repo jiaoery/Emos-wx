@@ -15,6 +15,8 @@
 </template>
 
 <script>
+	var QQMapWX=require('../../lib/qqmap-wx-jssdk.min.js');
+	var qqmapsdk;
 	export default {
 		data() {
 			return {
@@ -24,6 +26,9 @@
 				showCamera: true,
 				showImage: false
 			}
+		},
+		onLoad:function(){
+			qqmapsdk = new QQMapWX({key : 'S7UBZ-2D6CU-GUHVA-BASX5-ZHFXS-PCFO4'})
 		},
 		methods: {
 			clickBtn:function(){
@@ -41,7 +46,37 @@
 						}
 					});
 				}else{
-					//这里是签到
+					uni.showLoading({
+						title:"签到中请稍等"
+					})
+					setTimeout(function(){
+						uni.hideLoading()
+					},30000)
+					uni.getLocation({
+											type:"wgs84",
+											success:function(resp){
+												let latitude=resp.latitude
+												let longitude=resp.longitude
+												console.log('当前位置的经度：'+latitude)
+												console.log('当前位置的纬度'+longitude)
+												qqmapsdk.reverseGeocoder({
+													location:{
+														latitude:latitude,
+														longitude:longitude
+													},
+													success:function(resp){
+														console.log(resp.result)
+														let address = resp.result.address
+														let addressComponent = resp.result.address_component
+														let nation = addressComponent.nation
+														let province = addressComponent.province
+														let city= addressComponent.city
+														let district = addressComponent.district
+													}
+												})
+						
+						}
+					})
 				}
 			},
 			afresh:function(){

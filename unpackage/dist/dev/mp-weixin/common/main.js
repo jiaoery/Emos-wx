@@ -19,7 +19,7 @@ _App.default));
 
 createApp(app).$mount();
 
-var baseUrl = "http://localhost:8080/emos-wx-api";
+var baseUrl = "http://10.135.10.81:8080/emos-wx-api";
 _vue.default.prototype.url = {
   register: baseUrl + "/user/register",
   login: baseUrl + "/user/login" };
